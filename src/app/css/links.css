@@ -1,0 +1,28 @@
+/* 
+	Color configuration for links. Global consistent theme
+*/
+a:link{
+	color: var(--blue);
+	text-decoration: none;
+}
+
+a:hover{
+	color: var(--light-blue);
+	text-decoration: underline;
+}
+
+a:active{
+	color: var(--yellow);
+}
+
+a:visited{
+	color: var(--blue);
+}
+
+a:visited:hover{
+	color: var(--light-blue);
+}
+
+a:visited:active{
+	color: var(--yellow)
+}
