@@ -1,7 +1,7 @@
 # Hi there 👋
 
-- 🔭 I’m currently working on: nothing
-- 🌱 I’m currently learning: C++
+- 🔭 I’m currently working on: getting good
+- 🌱 I’m currently learning: Godot
 
 <div align="center">
 
