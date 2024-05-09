@@ -17,14 +17,23 @@ export default function Personal(){
 		/> <p className='text-blue-500 inline'>Pyt</p><p className='text-yellow-500 inline'>hon</p>
 		<p className='italic'>and some bash.</p>
 		
-		<br/>
-		<a href="https://github.com/PetricaT/MLS"><Image
+		<a href="https://github.com/PetricaT/dotfiles"><Image
 		src={'https://icons.iconarchive.com/icons/martz90/circle/256/linux-icon.png'}
 		width={16}
 		height={16}
 		alt="linux logo"
 		style={imageStyle}
-		/> My Linux Script</a>
+		/> My .dotfiles</a>
+		<p>
+		Sometimes I also make logos!
+		</p>
+		<a href="https://github.com/PetricaT/ProgrammingVTuberLogos-Addon">
+			<img src={'https://avatars.githubusercontent.com/u/24418935?v=4'}
+			width={16}
+			height={16}
+			alt='github profile picture'
+			style={imageStyle}
+			/> VTuber Style Logos</a>
 		</div>
 	)
 }
