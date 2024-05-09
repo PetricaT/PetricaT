@@ -1,7 +1,11 @@
 # Hi there 👋
 
-- 🔭 I’m currently working on: getting good
-- 🌱 I’m currently learning: Godot
+- 🔭 I’m currently working on: my masters degree
+- 🌱 I’m currently learning: to draw
+
+List o' skills:
+
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,react,py,c,cpp,godot,matlab,ps,pr,blender)](https://skillicons.dev)
 
 <div align="center">
 
