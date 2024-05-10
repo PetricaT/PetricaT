@@ -1,7 +1,7 @@
 name: Metrics
 
 on:
-  schedule: [{cron: "0 0 * * 0"}]
+  schedule: [{cron: "59 23 * * SUN"}]
   workflow_dispatch:
 
 jobs:
