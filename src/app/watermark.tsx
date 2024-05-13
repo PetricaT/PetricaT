@@ -6,7 +6,7 @@ const imageStyle = {
 
 export default function Watermark(){
 	return(
-		<div className='place-self-center h-7 ml-1 px-2 fixed drop-shadow-xl rounded-t-md absolute bottom-0 left-0 position-bottom bg-gradient-to-r from-cyan-500 to-blue-500'>
+		<div className='place-self-center h-7 ml-1 px-2 fixed drop-shadow-xl rounded-t-md absolute bottom-0 left-0 position-bottom bg-gradient-to-r from-cyan-500 to-blue-500 opacity-5 transition duration-300 hover:opacity-100'>
 			Made with <Image
 			src="https://icons.iconarchive.com/icons/arturo-wibawa/akar/256/typescript-icon.png"
 			alt="Typescript logo"
