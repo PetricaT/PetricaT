@@ -1,7 +1,7 @@
 name: Metrics
 
 on:
-  schedule: [{cron: "0 0 * * 0"}]
+  schedule: [{cron: "59 23 * * SUN"}]
   workflow_dispatch:
 
 jobs:
@@ -12,4 +12,9 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          filename: github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          base: header, repositories
+          plugin_lines: yes
+          plugin_languages: yes
+          plugin_fortune: yes
