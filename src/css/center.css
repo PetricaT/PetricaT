@@ -1,0 +1,27 @@
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--Black);
+    text-align: center;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+h4{
+    all: unset;
+    text-align: center;
+    color: var(--Gray)
+}
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px 0 10px;
+}
+
+.center-text{
+    padding: 0 10px 0 10px;
+    text-align: justify;
+}

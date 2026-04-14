@@ -1,0 +1,68 @@
+/* card-item.css */
+
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 7px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid transparent;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background 0.1s, border-color 0.1s;
+  user-select: none;
+}
+
+.card-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.card-item:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.card-item-image {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  flex-shrink: 0;
+  image-rendering: pixelated;
+}
+
+.card-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+}
+
+.card-item-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-item-description {
+  font-size: 9px;
+  color: #888888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-item-arrow {
+  font-size: 9px;
+  color: #888888;
+  flex-shrink: 0;
+}
+
+.card-item:hover .card-item-arrow {
+  color: #ffffff;
+}

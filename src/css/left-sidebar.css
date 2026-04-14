@@ -1,0 +1,24 @@
+h1{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--Black);
+    text-align: center;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.left-sidebar{
+    min-width: 150px;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-sidebar-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--Black);
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+/* fenced-section.css */
+
+.fenced-section {
+  position: relative;
+  border: 1px solid;         /* color set inline */
+  margin-top: 20px;          /* room for the tab that overhangs the top */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.fenced-tab {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  transform: translateY(-100%);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000000;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.fenced-tab-icon {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.fenced-tab-title {
+  line-height: 1;
+}
+
+.fenced-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px;
+}
