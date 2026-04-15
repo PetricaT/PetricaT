@@ -2,7 +2,7 @@
 
 - 🔭 I’m currently working on: my masters degree
 - 🌱 I’m currently learning: to draw
-- 🔗 [I have a website!](https://petrica-t.vercel.app/)
+- 🔗 [I have a website!](https://petricat.github.io/PetricaT/)
 
 <div align="center">
 
