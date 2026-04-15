@@ -27,11 +27,13 @@ export const Center = () => {
             </h4>
             <div className="center-text">
                 <p>
-                I usually work on stuff around my GitHub, so you can find many of my projects there. Mostly Python as it's so versatile :P, and I can make my stuff as cross-platform as possible, which is my primary goal as a programmer.
-                Hold no ties, use whatever you want.
-                </p><p>
-                Hey while you're here, check out some of my stuff!
+                    I usually work on stuff to fix problems I encounter, and you can find many of my projects on GitHub. Mostly Python as it's so versatile :P, 
+                    and I can make my stuff as <b>cross-platform</b> as possible, which is my primary goal as a programmer.
+                     <i> Hold no ties, use whatever you want.</i>
                 </p>
+                <h3>
+                    Hey while you're here, check out some of my stuff!
+                </h3>
                 <Section icon="📔" title="Projects" color="#42425e">
                     <CardItem
                         image="https://avatars.githubusercontent.com/u/24418935?v=4"
@@ -64,7 +66,7 @@ export const Center = () => {
                         href="https://github.com/PetricaT/arsenal-i18n"
                     />
                 </Section>
-                <br/>
+                <br />
                 I also like to collect pictures of the people I meet over time, and so, you can find a mini-collection over on the memoriam page
             </div>
         </div>

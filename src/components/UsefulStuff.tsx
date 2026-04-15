@@ -21,6 +21,20 @@ export const UsefulStuff = () => {
                     href="https://extensions.blender.org/add-ons/key-ops-toolkit/"
                 />
             </Section>
+            <Section icon="🎵" title="Music" color="#cc2626">
+                <CardItem
+                    image="https://www.musicpd.org/logo.png"
+                    title="Music Player Daemon (MPD)"
+                    description="Extensible music player server"
+                    href="https://www.musicpd.org/"
+                    />
+                <CardItem
+                    image="https://raw.githubusercontent.com/htkhiem/euphonica/refs/heads/main/data/icons/hicolor/scalable/apps/io.github.htkhiem.Euphonica.svg"
+                    title="Euphonica"
+                    description="An MPD music player"
+                    href="https://github.com/htkhiem/euphonica"
+                />
+            </Section>
             <Section icon="🌐" title="Cross Platform" color="#7fcc40">
                 <CardItem
                     image="https://imhex.werwolv.net/favicon.ico"
