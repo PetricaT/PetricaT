@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { Center } from "./components/Center";
 import { UsefulStuff } from "./components/UsefulStuff";
-import { Memorium } from "./components/Memorium";
+import { Memoriam } from "./components/Memoriam";
 import { LeftSidebar } from "./components/LeftSidebar";
 import { RightSidebar } from "./components/RightSidebar";
 import "./index.css";
 
-export type Page = "home" | "useful-stuff" | "memorium";
+export type Page = "home" | "useful-stuff" | "memoriam";
 
 export function App() {
   const [activePage, setActivePage] = useState<Page>("home");
@@ -16,7 +16,7 @@ export function App() {
     switch (activePage) {
       case "home":        return <Center />;
       case "useful-stuff": return <UsefulStuff />;
-      case "memorium":    return <Memorium />;
+      case "memoriam":    return <Memoriam />;
     }
   };
 

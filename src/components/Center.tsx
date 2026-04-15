@@ -1,4 +1,6 @@
 import "../css/center.css";
+import { Section } from "./shared/Section";
+import { CardItem } from "./shared/CardItem";
 
 let rng = Math.floor(Math.random() * 1000);
 let has_hit_lucky_number = false;
@@ -30,13 +32,40 @@ export const Center = () => {
                 </p><p>
                 Hey while you're here, check out some of my stuff!
                 </p>
-                <ul>
-                    <li>&gt; <a href="https://github.com/PetricaT/ProgrammingVTuberLogos-Addon">VTuber Style Logos</a></li>
-                    <li>&gt; <a href="https://github.com/PetricaT/IsaacMM">Isaac Mod Manager</a> - Because the internal one isn't enough</li>
-                    <li>&gt; <a href="https://github.com/PetricaT/SteamMarkdownEditor">Live Steam BBCode Editor</a> - So you can actually see your changes</li>
-                    <li>&gt; <a href="https://github.com/PetricaT/wayland-peek">Wayland Peek</a> - A simple wayland Window Spy re-creation.</li>
-                    <li>&gt; <a href="https://github.com/PetricaT/arsenal-i18n">Arsenal (Mod Manager) translations</a> - The community ran package</li>
-                </ul>
+                <Section icon="📔" title="Projects" color="#42425e">
+                    <CardItem
+                        image="https://avatars.githubusercontent.com/u/24418935?v=4"
+                        title="Programming VTuber Logos"
+                        description="Growing collection of VTuber logos, made by me."
+                        href="https://github.com/PetricaT/ProgrammingVTuberLogos-Addon"
+                    />
+                    <CardItem
+                        image="https://github.com/PetricaT/IsaacMM/blob/main/assets/icon.png?raw=true"
+                        title="IsaacMM"
+                        description="Simple mod manager for Isaac"
+                        href="https://github.com/PetricaT/IsaacMM"
+                    />
+                    <CardItem
+                        image="https://store.steampowered.com/favicon.ico"
+                        title="Steam BBCode Editor"
+                        description="Live editor and parser for Steam style BBCode"
+                        href="https://github.com/PetricaT/SteamMarkdownEditor"
+                    />
+                    <CardItem
+                        image="https://www.linux.fi/w/images/thumb/9/99/Wayland_Logo.svg/266px-Wayland_Logo.svg.png?20200927133655"
+                        title="Wayland Peek"
+                        description="A simple wayland Window Spy re-creation."
+                        href="https://github.com/PetricaT/wayland-peek"
+                    />
+                    <CardItem
+                        image="https://raw.githubusercontent.com/PetricaT/arsenal-i18n/refs/heads/main/assets/arsenal-i18n.svg"
+                        title="Arsenal (Mod Manager) translations"
+                        description="The community ran package"
+                        href="https://github.com/PetricaT/arsenal-i18n"
+                    />
+                </Section>
+                <br/>
+                I also like to collect pictures of the people I meet over time, and so, you can find a mini-collection over on the memoriam page
             </div>
         </div>
     );

@@ -22,10 +22,10 @@ export const Navbar = ({ activePage, setActivePage }: NavbarProps) => {
         // Useful Stuff
       </button>
       <button
-        className={activePage === "memorium" ? "active" : ""}
-        onClick={() => setActivePage("memorium")}
+        className={activePage === "memoriam" ? "active" : ""}
+        onClick={() => setActivePage("memoriam")}
       >
-        // Memorium
+        // Memoriam
       </button>
     </nav>
   );

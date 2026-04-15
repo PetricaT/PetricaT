@@ -39,9 +39,9 @@
 }
 
 .card-item-title {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--Black);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -50,8 +50,8 @@
 }
 
 .card-item-description {
-  font-size: 9px;
-  color: #888888;
+  font-size: 11px;
+  color: var(--Gray);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

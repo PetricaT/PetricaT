@@ -1,4 +1,5 @@
 import "../../css/card-item.css";
+import fallbackImage from "../../../assets/icons/color/missing.svg";
 
 type CardItemProps = {
   image: string;         // image src URL
@@ -15,11 +16,13 @@ export const CardItem = ({ image, imageAlt = "", title, description, href, onCli
     else onClick?.();
   };
 
+  const imageUrl = image === "" ? fallbackImage : image;
+
   return (
     <div className="card-item" onClick={handleClick} role="button" tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && handleClick()}
     >
-      <img className="card-item-image" src={image} alt={imageAlt} />
+      <img className="card-item-image" src={imageUrl} alt={imageAlt} />
       <div className="card-item-body">
         <span className="card-item-title">{title}</span>
         {description && <span className="card-item-description">{description}</span>}
@@ -28,3 +31,4 @@ export const CardItem = ({ image, imageAlt = "", title, description, href, onCli
     </div>
   );
 };
+
