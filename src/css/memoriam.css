@@ -1,0 +1,228 @@
+/* memoriam.css */
+
+/* ── Sections ──────────────────────────────────────────────────────────────── */
+
+.memoriam-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.game-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.game-rule {
+  flex: 1;
+  height: 1px;
+  background: #ffffff;
+  opacity: 0.3;
+}
+
+.game-arrow {
+  font-size: 8px;
+  color: #888888;
+  flex-shrink: 0;
+}
+
+.game-header:hover .game-title {
+  opacity: 0.7;
+}
+
+/* ── Piles ──────────────────────────────────────────────────────────────────── */
+
+.game-piles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-left: 24px;
+}
+
+.pile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.pile-stack {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.pile-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 1px solid #ffffff;
+  transform-origin: center center;
+  transition: transform 0.15s ease;
+}
+
+.pile-video-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111111;
+  color: #888888;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.pile-wrapper:hover .pile-photo:nth-child(1) { transform: rotate(-10deg) translate(-8px, 4px); }
+.pile-wrapper:hover .pile-photo:nth-child(2) { transform: rotate(6deg)   translate(6px, -3px); }
+.pile-wrapper:hover .pile-photo:nth-child(3) { transform: rotate(-2deg)  translate(0px, 2px);  }
+
+.pile-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 10px;
+  margin-top: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.pile-count {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 8px;
+  color: #888888;
+}
+
+/* ── Carousel ───────────────────────────────────────────────────────────────── */
+
+.carousel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.carousel-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.carousel-media {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.carousel-img {
+  max-width: 70vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border: 1px solid #ffffff;
+  display: block;
+}
+
+.carousel-video {
+  max-width: 70vw;
+  max-height: 78vh;
+  border: 1px solid #ffffff;
+  display: block;
+  background: #000000;
+}
+
+.carousel-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.carousel-caption {
+  font-size: 9px;
+  color: #ffffff;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.carousel-date {
+  font-size: 9px;
+  color: #888888;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.carousel-arrow {
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  padding: 6px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.carousel-arrow:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.carousel-close {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #888888;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-close:hover {
+  color: #ffffff;
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 9px;
+  color: #888888;
+  white-space: nowrap;
+}

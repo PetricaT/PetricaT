@@ -37,7 +37,7 @@ export const Center = () => {
                 <Section icon="📔" title="Projects" color="#42425e">
                     <CardItem
                         image="https://avatars.githubusercontent.com/u/24418935?v=4"
-                        title="Programming VTuber Logos"
+                        title="Programming VTuber Logos (Addons)"
                         description="Growing collection of VTuber logos, made by me."
                         href="https://github.com/PetricaT/ProgrammingVTuberLogos-Addon"
                     />
