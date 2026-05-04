@@ -1,0 +1,314 @@
+{
+  "almandine": {
+    "avg": 4.69,
+    "max": 103,
+    "min": 1,
+    "sale_avg": 2.78
+  },
+  "amethyst": {
+    "avg": 3.35,
+    "max": 99,
+    "min": 1.5,
+    "sale_avg": 3.08
+  },
+  "ancestor silk": {
+    "avg": 27.15,
+    "max": 5000,
+    "min": 5,
+    "sale_avg": 18.5
+  },
+  "antimony": {
+    "avg": 191.61,
+    "max": 666.3333,
+    "min": 79,
+    "sale_avg": 154.44
+  },
+  "aurbic amber": {
+    "avg": 36025.06,
+    "max": 59999.95,
+    "min": 25000,
+    "sale_avg": 33461.19
+  },
+  "bloodstone": {
+    "avg": 5.81,
+    "max": 1999.8,
+    "min": 0.99,
+    "sale_avg": 2.8
+  },
+  "carnelian": {
+    "avg": 10.66,
+    "max": 53,
+    "min": 2,
+    "sale_avg": 3.15
+  },
+  "chysolite": {
+    "avg": 8.17,
+    "max": 1327,
+    "min": 1.5,
+    "sale_avg": 2.79
+  },
+  "citrine": {
+    "avg": 4.56,
+    "max": 290,
+    "min": 1.037037,
+    "sale_avg": 2.81
+  },
+  "cobalt": {
+    "avg": 514.47,
+    "max": 1999,
+    "min": 90,
+    "sale_avg": 163.29
+  },
+  "dawn-prism": {
+    "avg": 6433.72,
+    "max": 19999,
+    "min": 4166.667,
+    "sale_avg": 5438.72
+  },
+  "denata": {
+    "avg": 13.64,
+    "max": 1003,
+    "min": 1.992857,
+    "sale_avg": 4.75
+  },
+  "diamond": {
+    "avg": 5.59,
+    "max": 100,
+    "min": 1.34,
+    "sale_avg": 3.06
+  },
+  "dibellium": {
+    "avg": 4005.72,
+    "max": 10000,
+    "min": 1991,
+    "sale_avg": 2603.14
+  },
+  "dreugh wax": {
+    "avg": 9100.64,
+    "max": 82000,
+    "min": 6875,
+    "sale_avg": 8440.64
+  },
+  "dwarven oil": {
+    "avg": 11.34,
+    "max": 949,
+    "min": 4,
+    "sale_avg": 6.21
+  },
+  "elegant lining": {
+    "avg": 150.12,
+    "max": 1718.75,
+    "min": 20,
+    "sale_avg": 58.38
+  },
+  "embroidery": {
+    "avg": 11.03,
+    "max": 3212,
+    "min": 3,
+    "sale_avg": 6.48
+  },
+  "emerald": {
+    "avg": 4.61,
+    "max": 53,
+    "min": 1.88,
+    "sale_avg": 2.95
+  },
+  "fire opal": {
+    "avg": 5.1,
+    "max": 101,
+    "min": 1,
+    "sale_avg": 3.06
+  },
+  "fortified nirncrux": {
+    "avg": 10180.6,
+    "max": 50000,
+    "min": 7700,
+    "sale_avg": 9182.78
+  },
+  "garnet": {
+    "avg": 4.22,
+    "max": 100,
+    "min": 1,
+    "sale_avg": 2.75
+  },
+  "gilding wax": {
+    "avg": 2490.7,
+    "max": 4999,
+    "min": 1990,
+    "sale_avg": 2407.26
+  },
+  "grain solvent": {
+    "avg": 97.95,
+    "max": 3333.333,
+    "min": 20,
+    "sale_avg": 41.82
+  },
+  "hakeijo": {
+    "avg": 24124.58,
+    "max": 500000,
+    "min": 15000,
+    "sale_avg": 20717.9
+  },
+  "hemming": {
+    "avg": 8.41,
+    "max": 123,
+    "min": 3,
+    "sale_avg": 5.56
+  },
+  "honing stone": {
+    "avg": 8.43,
+    "max": 352.1538,
+    "min": 1,
+    "sale_avg": 5.51
+  },
+  "iron ingot": {
+    "avg": 8.88,
+    "max": 320,
+    "min": 2,
+    "sale_avg": 5.68
+  },
+  "jade": {
+    "avg": 3.88,
+    "max": 189,
+    "min": 1.995,
+    "sale_avg": 3.4
+  },
+  "jute": {
+    "avg": 17.49,
+    "max": 200,
+    "min": 2.5,
+    "sale_avg": 11.24
+  },
+  "kuta": {
+    "avg": 2450.03,
+    "max": 25000,
+    "min": 900,
+    "sale_avg": 2102.01
+  },
+  "mastic": {
+    "avg": 131.88,
+    "max": 3360.333,
+    "min": 1.785714,
+    "sale_avg": 52.74
+  },
+  "pitch": {
+    "avg": 30.48,
+    "max": 1867,
+    "min": 6,
+    "sale_avg": 24.35
+  },
+  "platinum ounce": {
+    "avg": 77.63,
+    "max": 5000,
+    "min": 7,
+    "sale_avg": 70.88
+  },
+  "potent nirncrux": {
+    "avg": 14582.95,
+    "max": 30000,
+    "min": 11000,
+    "sale_avg": 13907.75
+  },
+  "quartz": {
+    "avg": 4.91,
+    "max": 250,
+    "min": 1,
+    "sale_avg": 2.82
+  },
+  "rawhide": {
+    "avg": 10.52,
+    "max": 1200,
+    "min": 2.5,
+    "sale_avg": 6.38
+  },
+  "rekuta": {
+    "avg": 48.45,
+    "max": 4999,
+    "min": 4.85,
+    "sale_avg": 13.09
+  },
+  "rosin": {
+    "avg": 659.7,
+    "max": 125000,
+    "min": 300,
+    "sale_avg": 497.76
+  },
+  "rubedite ingot": {
+    "avg": 11.45,
+    "max": 250,
+    "min": 3.488372,
+    "sale_avg": 7.21
+  },
+  "rubedo leather": {
+    "avg": 12.37,
+    "max": 199.5,
+    "min": 4.845,
+    "sale_avg": 8.01
+  },
+  "ruby": {
+    "avg": 13.9,
+    "max": 2000,
+    "min": 2,
+    "sale_avg": 3.22
+  },
+  "sanded maple": {
+    "avg": 8.42,
+    "max": 100,
+    "min": 3,
+    "sale_avg": 5.08
+  },
+  "sanded ruby ash": {
+    "avg": 12.82,
+    "max": 5000,
+    "min": 2,
+    "sale_avg": 7.08
+  },
+  "sapphire": {
+    "avg": 5.27,
+    "max": 1000,
+    "min": 1.34,
+    "sale_avg": 3.12
+  },
+  "sardonyx": {
+    "avg": 8.06,
+    "max": 550,
+    "min": 1,
+    "sale_avg": 2.73
+  },
+  "slaughterstone": {
+    "avg": 2081.17,
+    "max": 20000,
+    "min": 1000,
+    "sale_avg": 1737.23
+  },
+  "tempering alloy": {
+    "avg": 4824.1,
+    "max": 40000,
+    "min": 3100,
+    "sale_avg": 4143.07
+  },
+  "titanium": {
+    "avg": 2197.2,
+    "max": 5200,
+    "min": 1350,
+    "sale_avg": 2032.93
+  },
+  "turpen": {
+    "avg": 13.63,
+    "max": 2000,
+    "min": 4,
+    "sale_avg": 7.31
+  },
+  "turquoise": {
+    "avg": 3.43,
+    "max": 45.45454,
+    "min": 1,
+    "sale_avg": 2.93
+  },
+  "zinc": {
+    "avg": 202.97,
+    "max": 1166.333,
+    "min": 99,
+    "sale_avg": 172.12
+  }
+}
