@@ -24,3 +24,7 @@ echo "Done refreshing price table."
 python ${SCRIPT_DIR}/convert_eso_price.py
 
 echo "Parsing finished."
+echo "Cleaning up"
+
+rm ${SCRIPT_DIR}/PriceTableEU.lua
+rm ${SCRIPT_DIR}/ItemLookUpTable_EN.lua
