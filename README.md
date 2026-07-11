@@ -1,6 +1,6 @@
 # Welcome!
 
-- 🔭 I’m currently working on: my masters degree
+- 🔭 I’m currently working on: random projects
 - 🌱 I’m currently learning: to draw
 - 🔗 [I have a website!](https://petricat.github.io/PetricaT/)
 
