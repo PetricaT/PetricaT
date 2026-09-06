@@ -1,6 +1,6 @@
 # Welcome!
 
-- 🔭 I’m currently working on: random projects
+- 🔭 I’m currently working on: [GameModManager](https://github.com/GameModManager/Core), something to fill the gap MO2 left behind on Linux and MacOS(and Windows)
 - 🌱 I’m currently learning: to draw
 - 🔗 [I have a website!](https://petricat.github.io/PetricaT/)
 
