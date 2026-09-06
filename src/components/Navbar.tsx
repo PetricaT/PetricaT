@@ -27,6 +27,12 @@ export const Navbar = ({ activePage, setActivePage }: NavbarProps) => {
       >
         // Memoriam
       </button>
+      <button
+        className={activePage === "eso-guides" ? "active" : ""}
+        onClick={() => setActivePage("eso-guides")}
+      >
+        // ESO Guides
+      </button>
     </nav>
   );
 };

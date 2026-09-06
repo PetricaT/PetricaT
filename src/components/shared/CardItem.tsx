@@ -8,19 +8,26 @@ type CardItemProps = {
   description?: string;
   href?: string;         // if provided, opens this URL
   onClick?: () => void;  // alternatively, a click handler
+  tooltip?: string;      // optional tooltip text
 };
 
-export const CardItem = ({ image, imageAlt = "", title, description, href, onClick }: CardItemProps) => {
+export const CardItem = ({ image, imageAlt = "", title, description, href, tooltip = "", onClick }: CardItemProps) => {
   const handleClick = () => {
     if (href) window.open(href, "_blank", "noopener noreferrer");
     else onClick?.();
   };
 
   const imageUrl = image === "" ? fallbackImage : image;
+  const hasTooltip = tooltip !== "";
 
   return (
-    <div className="card-item" onClick={handleClick} role="button" tabIndex={0}
+    <div
+      className={`card-item${hasTooltip ? " card-item-faded" : ""}`}
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && handleClick()}
+      title={hasTooltip ? tooltip : undefined}
     >
       <img className="card-item-image" src={imageUrl} alt={imageAlt} />
       <div className="card-item-body">
@@ -31,4 +38,3 @@ export const CardItem = ({ image, imageAlt = "", title, description, href, onCli
     </div>
   );
 };
-

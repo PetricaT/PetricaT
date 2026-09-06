@@ -5,8 +5,12 @@ export const LeftSidebar = () => {
     return (
         <div className="left-sidebar frame">
             <h1>
-                &gt;&gt; News &lt;&lt;
+                &gt;&gt; News
             </h1>
+            <QuoteBlock
+                text="ESO Guides are now a thing, check them out pls!"
+                date="2026/09/06"
+            />
             <QuoteBlock
                 text="Memoriam is now up and running!"
                 date="2026/04/15"
