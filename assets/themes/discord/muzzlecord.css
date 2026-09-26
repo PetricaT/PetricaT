@@ -7,13 +7,26 @@
     background-image: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-muted.png");
 }
 /* -- Better Dog Mute */
-[class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"] [class*="lottieIcon_"]::after {
-    background-image: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-unmuted.png");
+.buttons__37e49
+> .audioButtonParent__5e764:nth-child(2)
+> button[role="switch"][aria-checked="false"] {
+    [class*="lottieIcon_"]::after {
+        background: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-unmuted.png")
+            center / contain no-repeat;
+    }
 }
+
 /* -- Better Dog Mute Tooltip */
-body:has([class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="false"]:hover)
-    [class*="tooltip_"] div[data-text-variant="text-sm/medium"]::after {
-    content: "Muzzle";
+body:has(
+    .buttons__37e49
+    > .audioButtonParent__5e764:nth-child(2)
+    > button[role="switch"][aria-checked="false"]:hover
+) {
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+        &::after {
+            content: "Muzzle";
+        }
+    }
 }
 
 /* Source Backup -- 2026/09/26 */
