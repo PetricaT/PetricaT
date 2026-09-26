@@ -4,15 +4,15 @@
 /* --- Overwrites --- */
 /* -- Better Dog Unmute */
 [class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="true"] [class*="lottieIcon_"]::after {
-    background-image: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-muted.png");
+    background-image: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-muzzle.svg") !important;
 }
 /* -- Better Dog Mute */
 .buttons__37e49
 > .audioButtonParent__5e764:nth-child(2)
 > button[role="switch"][aria-checked="false"] {
     [class*="lottieIcon_"]::after {
-        background: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-unmuted.png")
-            center / contain no-repeat;
+        background: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-bark.svg")
+            center / contain no-repeat  !important;
     }
 }
 
@@ -28,6 +28,23 @@ body:has(
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Source Backup -- 2026/09/26 */
 /**

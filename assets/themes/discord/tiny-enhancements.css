@@ -1,0 +1,147 @@
+/* Collection of tweaks from:
+    - https://gist.github.com/qyurila/f82e1b4719b156e7710d64fcd07f4c09
+*/
+
+/* + Messages Slide In Chat */
+[class*=isSending_] {
+    animation: slide-up .25s ease;
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateX(20px); /* -20px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* + Modernized audio attachments (Vencord #css-snippets) */
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1272837576381698048 */
+[class^=wrapperAudio_] {
+    > [class^=audioMetadata_] {
+        margin-bottom: 24px;
+    }
+    > [class^=audioControls_] {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        border-radius: 0px 0px 8px 8px;
+    }
+}
+
+/* + Color message pills (Vencord #css-snippets)*/
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1272838024048148513 */
+/*     Blue Pill      */
+[class^="iconVisibility_"]:has([style="color: var(--text-brand);"]) > [class^="unread_"] {
+    background-color: var(--text-brand);
+}
+/*     Red Pill      */
+[class^="iconVisibility_"]:has([class^="mentionsBadge_"]) > [class^="unread_"] {
+    background-color: var(--status-danger);
+}
+
+/* + Large webcam preview in screenshare (Vencord #css-snippets)*/
+/* https://discord.com/channels/1015060230222131221/1028106818368589824/1272278542088015953 */
+div[class^=callContainer] div[class^=pictureInPictureWindow] {
+    scale: 2;
+    translate: 50% -75%;
+}
+
+
+/* + Improve user profile modal (Vencord #css-snippets)*/
+/*Limit Modal v2 to Modal v1 Width of 600px*/
+[class^="layoutContainer"] {
+    max-width: 600px;
+}
+
+.user-profile-modal-v2 {
+    /*Disable Widgets*/
+    [id^="widgets"], [role^="tablist"] {
+        display: none;
+    }
+
+    /*Modal v1-ify Profile Content*/
+    [class*="profileContentInner"] {
+        --custom-modal-v2-padding: var(--space-0);
+
+        [class^="profile"] {
+            width: 100%;
+            border-radius: var(--radius-lg);
+
+            [class*="profileHeaderBanner"] {
+                border-radius: 0 !important;
+
+                [class^="editButton"] {
+                    inset-inline-end: var(--space-48);
+                }
+            }
+        }
+    }
+
+    /*Fix Profile Frame Scale*/
+    [class^="profileFrame"] {
+        width: 103% !important;
+    }
+}
+
+/*Remove Nitro Upsells from Modal v2*/
+#user-profile-editing-panel {
+[class^="floatingFooter"], [class^="guildProfileUpsell"], [class^="premium"], [class^="expressiveWrapper"] {
+    display: none;
+}
+}
+
+/**
+ * @name AlignedChatBox
+ * @author CodeF53
+ * @version 3.0
+ * @description Aligns chat box with the bottom of the screen and user controls
+ */
+:is(main,section)[class^=chatContent] > form,
+form > div[class^=submitContainer] {
+    /* align chatbox */
+    padding: 0px;
+    > div > div[class^=channelTextArea] {
+        margin: 0px !important;
+        > div[class^=scrollableContainer] {
+            min-height: 49px;
+            padding-top: 4px;
+            border-radius: 0px;
+        }
+    }
+    /* align forum channel thing */
+    > div { margin-bottom: 0px; border-radius: 0px; }
+
+    /* move slowmode/typing indicator to match */
+    > div[class^=typing] {
+        top: -24px;
+        right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+        margin-left: auto;
+        width: fit-content;
+        padding-left: 2px;
+        padding-right: 9px;
+        border-radius: 8px 8px 0px 0px;
+        background-color: var(--channeltextarea-background);
+    }
+    /* make scrollbar meet chatbox */
+    &::after { display: none; }
+
+    /* fix replies */
+    > div > div > div[class^=attachedBars] {
+        min-height: unset !important;
+        padding-bottom: 4px;
+    }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+    left: 0; right: unset;
+    border-radius: 0px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+    > button[class^=barButtonMain] {
+        flex: 0 0 auto;
+        display: none;
+    }
+}
