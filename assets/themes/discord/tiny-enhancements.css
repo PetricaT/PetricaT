@@ -31,24 +31,9 @@
     }
 }
 
-/* + Color message pills (Vencord #css-snippets)*/
+/* - Color message pills (Vencord #css-snippets)*/
+/* Disabled due to: performance hog */
 /* https://discord.com/channels/1015060230222131221/1028106818368589824/1272838024048148513 */
-/*     Blue Pill      */
-[class^="iconVisibility_"]:has([style="color: var(--text-brand);"]) > [class^="unread_"] {
-    background-color: var(--text-brand);
-}
-/*     Red Pill      */
-[class^="iconVisibility_"]:has([class^="mentionsBadge_"]) > [class^="unread_"] {
-    background-color: var(--status-danger);
-}
-
-/* + Large webcam preview in screenshare (Vencord #css-snippets)*/
-/* https://discord.com/channels/1015060230222131221/1028106818368589824/1272278542088015953 */
-div[class^=callContainer] div[class^=pictureInPictureWindow] {
-    scale: 2;
-    translate: 50% -75%;
-}
-
 
 /* + Improve user profile modal (Vencord #css-snippets)*/
 /*Limit Modal v2 to Modal v1 Width of 600px*/
@@ -93,12 +78,9 @@ div[class^=callContainer] div[class^=pictureInPictureWindow] {
 }
 }
 
-/**
- * @name AlignedChatBox
- * @author CodeF53
- * @version 3.0
- * @description Aligns chat box with the bottom of the screen and user controls
- */
+
+/*  AlignedChatBox */
+
 :is(main,section)[class^=chatContent] > form,
 form > div[class^=submitContainer] {
     /* align chatbox */
