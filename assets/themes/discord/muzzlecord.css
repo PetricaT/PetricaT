@@ -1,30 +1,125 @@
-/* Based on MutedToMuzzled by 1xzozz & Moshikiwi */
-@import url("https://moshikiwi.github.io/MutedToMuzzledVencordPort/MutedToMuzzled.css");
+/**
+ * @name PupCord
+ * @description Makes discord more puppy.
+ * @credits Original BetterDiscord plugin by 1xzozz & Moshikiwi
+ */
 
-/* --- Overwrites --- */
-/* -- Better Dog Unmute */
-[class*="audioButtonParent_"]:not([class*="audioButtonParent_"] ~ *) > button[role="switch"][aria-checked="true"] [class*="lottieIcon_"]::after {
-    background-image: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-muzzle.svg") !important;
+/* Based on MutedToMuzzled by 1xzozz & Moshikiwi */
+/* @import url("https://moshikiwi.github.io/MutedToMuzzledVencordPort/MutedToMuzzled.css"); */
+
+:root {
+    --mute-icon: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-bark.png");
+    --unmute-icon: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-muzzle.png");
+    --deafen-icon: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-cage-open.png");
+    --undeafen-icon: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-cage-closed.png");
 }
-/* -- Better Dog Mute */
-.buttons__37e49
-> .audioButtonParent__5e764:nth-child(2)
-> button[role="switch"][aria-checked="false"] {
+
+/* Mute */
+button[aria-label="Mute"] {
+    [class*="lottieIcon_"] > svg {
+        display: none;
+    }
+
     [class*="lottieIcon_"]::after {
-        background: url("https://media.githubusercontent.com/media/PetricaT/PetricaT/refs/heads/main/assets/icons/monotone/dog-bark.svg")
-            center / contain no-repeat  !important;
+        content: "";
+        display: block;
+        width: 21px;
+        height: 21px;
+        scale: 1.3;
+        background: var(--mute-icon) center / contain no-repeat;
+    }
+
+    &[aria-checked="true"] [class*="lottieIcon_"]::after {
+        background-image: var(--unmute-icon);
+        scale: 1.2;
     }
 }
 
-/* -- Better Dog Mute Tooltip */
-body:has(
-    .buttons__37e49
-    > .audioButtonParent__5e764:nth-child(2)
-    > button[role="switch"][aria-checked="false"]:hover
-) {
+/* Deafen */
+button[aria-label="Deafen"] {
+    [class*="lottieIcon_"] > svg {
+        display: none;
+    }
+
+    [class*="lottieIcon_"]::after {
+        content: "";
+        display: block;
+        width: 21px;
+        height: 21px;
+        scale: 1.1;
+        background: var(--deafen-icon) center / contain no-repeat;
+    }
+
+    &[aria-checked="true"] [class*="lottieIcon_"]::after {
+        background-image: var(--undeafen-icon);
+    }
+}
+
+/* Now the tooltips */
+[class*="tooltip_"] {
+    div[data-text-variant="text-sm/medium"] {
+        transition: font-size 0s;
+        transition-delay: 180ms;
+    }
+}
+
+body:has(button[aria-label="Mute"][aria-checked="true"]:hover),
+body:has(button[aria-label="Deafen"][aria-checked="true"]:hover) {
     [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+        font-size: 0 !important;
+        line-height: 18px !important;
+        transition-delay: 0s;
+
         &::after {
-            content: "Muzzle";
+            content: "Muzzled";
+            display: inline;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+body:has(button[aria-label="Mute"][aria-checked="false"]:hover) {
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+        font-size: 0 !important;
+        line-height: 18px !important;
+        transition-delay: 0s;
+
+        &::after {
+            content: "Bark!!";
+            display: inline;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+body:has(button[aria-label="Deafen"][aria-checked="false"]:hover) {
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+        font-size: 0 !important;
+        line-height: 18px !important;
+        transition-delay: 0s;
+
+        &::after {
+            content: "Cage";
+            display: inline;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+
+body:has(button[aria-label="Deafen"][aria-checked="true"]:hover) {
+    [class*="tooltip_"] div[data-text-variant="text-sm/medium"] {
+        font-size: 0 !important;
+        line-height: 18px !important;
+        transition-delay: 0s;
+
+        &::after {
+            content: "Caged";
+            display: inline;
+            font-size: 14px;
+            line-height: 18px;
         }
     }
 }
@@ -35,11 +130,7 @@ body:has(
 
 
 
-
-
-
-
-
+---------------------------------------------------------------
 
 
 
