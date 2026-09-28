@@ -1,3 +1,9 @@
+/**
+ * @name Hide Chat in Disabled
+ * @author PetricaT
+ * @version 1.0
+ * @description Hides the text bar in no send channels
+ */
 /* Old CSS Snippet from Powercord era, unknown author. */
 
 [class*=channelTextAreaDisabled] {
