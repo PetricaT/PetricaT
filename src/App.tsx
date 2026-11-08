@@ -3,12 +3,13 @@ import { Navbar } from "./components/Navbar";
 import { Center } from "./components/Center";
 import { UsefulStuff } from "./components/UsefulStuff";
 import { Memoriam } from "./components/Memoriam";
-import { ESOGuides } from "./components/ESOGuides";
+// import { ESOGuides } from "./components/ESOGuides";
 import { LeftSidebar } from "./components/LeftSidebar";
 import { RightSidebar } from "./components/RightSidebar";
+import { MarkersDB } from "./components/MarkersDB";
 import "./index.css";
 
-export type Page = "home" | "useful-stuff" | "memoriam" | "eso-guides";
+export type Page = "home" | "useful-stuff" | "memoriam" | "eso-guides" | "markers-db";
 
 export function App() {
   const [activePage, setActivePage] = useState<Page>("home");
@@ -18,7 +19,8 @@ export function App() {
       case "home":        return <Center />;
       case "useful-stuff": return <UsefulStuff />;
       case "memoriam":    return <Memoriam />;
-      case "eso-guides":  return <ESOGuides />;
+      // case "eso-guides":  return <ESOGuides />;
+      case "markers-db":  return <MarkersDB />;
     }
   };
 

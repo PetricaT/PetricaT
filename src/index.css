@@ -23,6 +23,9 @@
   --dark-primary: #1f1f1f;
   --dark-secondary: #3a3a3a;
 
+  --Accent: var(--Red);
+  --AccentHi: var(--RedHi);
+  --AccentLow: var(--Orange);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -27,11 +27,17 @@ export const Navbar = ({ activePage, setActivePage }: NavbarProps) => {
       >
         // Memoriam
       </button>
-      <button
+      {/* <button
         className={activePage === "eso-guides" ? "active" : ""}
         onClick={() => setActivePage("eso-guides")}
       >
         // ESO Guides
+      </button> */}
+      <button
+        className={activePage === "markers-db" ? "active" : ""}
+        onClick={() => setActivePage("markers-db")}
+      >
+        // Markers DB
       </button>
     </nav>
   );

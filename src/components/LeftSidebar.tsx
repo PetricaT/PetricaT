@@ -8,9 +8,15 @@ export const LeftSidebar = () => {
                 &gt;&gt; News
             </h1>
             <QuoteBlock
-                text="ESO Guides are now a thing, check them out pls!"
+                text="There is now a MoreMarkers / Markers! database page."
+                date="2026/11/08"
+            />
+
+            <QuoteBlock
+                text="ESO Guides are now a thing, but I haven't gotten around to writing them yet."
                 date="2026/09/06"
             />
+            
             <QuoteBlock
                 text="Memoriam is now up and running!"
                 date="2026/04/15"
