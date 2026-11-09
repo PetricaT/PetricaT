@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bun --hot src/index.ts",
-    "prebuild": "bun run scripts/build-guides.ts",
+    "predev": "bun run src/scripts/generate_markers_db.ts",
+    "prebuild": "bun run src/scripts/generate_markers_db.ts",
     "build": "bun build ./src/index.html --outdir=docs --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
     "start": "NODE_ENV=production bun src/index.ts"
   },

@@ -1,0 +1,594 @@
+.main-content--marker-viewer {
+    flex: 1;
+    height: 0;
+    min-height: 0;
+    justify-content: stretch;
+    overflow: hidden;
+}
+
+.marker-viewer {
+    display: grid;
+    flex: 1;
+    grid-template-rows: auto minmax(0, 1fr);
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border-color: var(--DarkGray);
+}
+
+.marker-viewer__header {
+    display: grid;
+    grid-template-columns: minmax(130px, 1fr) minmax(0, 2fr) minmax(130px, 1fr);
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--LightGray);
+}
+
+.marker-viewer__back {
+    justify-self: start;
+    width: auto;
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--LightGray);
+    color: var(--Black);
+    white-space: nowrap;
+}
+
+.marker-viewer__heading {
+    min-width: 0;
+    text-align: center;
+}
+
+.marker-viewer__heading h1 {
+    margin: 2px 0 0;
+    overflow-wrap: anywhere;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.marker-viewer__eyebrow {
+    color: var(--Gray);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.marker-viewer__modes {
+    display: inline-flex;
+    justify-self: end;
+    border: 1px solid var(--LightGray);
+}
+
+.marker-viewer__modes button {
+    transition: ease-in-out 0.2s;
+    width: auto;
+    height: 34px;
+    padding: 6px 12px;
+    color: var(--DarkGray);
+}
+
+.marker-viewer__modes button+button {
+    border-left: 1px solid var(--LightGray);
+}
+
+.marker-viewer__modes button.is-active {
+    background: var(--Accent);
+    color: var(--White);
+}
+
+.marker-viewer__modes button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+}
+
+.marker-viewer__body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    min-height: 0;
+}
+
+.marker-viewer__stage {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    place-items: center;
+    overflow: hidden;
+    padding: 12px;
+    background: var(--DarkGray);
+    cursor: grab;
+    touch-action: none;
+}
+
+.marker-viewer__stage.is-dragging {
+    cursor: grabbing;
+}
+
+.marker-viewer__stage.is-dragging .marker-viewer__map {
+    transition: none;
+}
+
+.marker-viewer__stage.is-editing .marker-viewer__marker {
+    cursor: grab;
+}
+
+.marker-viewer__map {
+    position: relative;
+    width: min(100%, calc(100dvh - 230px));
+    aspect-ratio: 1;
+    flex: none;
+    transform-origin: center;
+    transition: transform 120ms ease-out;
+}
+
+.marker-viewer__tiles {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.marker-viewer__tiles img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    user-select: none;
+}
+
+.marker-viewer__marker {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    min-width: 0;
+    padding: 0;
+    transform: translate(-50%, -25%);
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.marker-viewer__marker-icon {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    filter: drop-shadow(0 1px 2px #000);
+}
+
+.marker-viewer__marker-label {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+    text-shadow: 0 1px 2px #000, 1px 0 2px #000, 0 -1px 2px #000, -1px 0 2px #000;
+    white-space: pre;
+    pointer-events: none;
+}
+
+.marker-viewer__marker:hover,
+.marker-viewer__marker.is-selected {
+    z-index: 2;
+    filter: drop-shadow(0 0 3px #fff);
+}
+
+.marker-viewer__zoom-controls {
+    position: absolute;
+    z-index: 3;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--LightGray);
+    background: var(--White);
+    box-shadow: 0 1px 5px #0005;
+}
+
+.marker-viewer__zoom-controls button {
+    width: auto;
+    min-width: 34px;
+    height: 34px;
+    padding: 5px 8px;
+    color: var(--Black);
+}
+
+.marker-viewer__zoom-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.marker-viewer__zoom-controls output {
+    min-width: 46px;
+    color: var(--DarkGray);
+    font-size: 11px;
+    text-align: center;
+}
+
+.marker-viewer__zoom-controls button:last-child {
+    border-left: 1px solid var(--LightGray);
+    font-size: 12px;
+}
+
+.marker-viewer__inspector {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+    border-left: 1px solid var(--LightGray);
+    background: var(--White);
+}
+
+.marker-viewer__export-footer {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    padding: 10px 16px;
+    border-top: 1px solid var(--LightGray);
+    background: var(--White);
+}
+
+.marker-viewer__export-status {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--Gray);
+    font-size: 12px;
+}
+
+.marker-viewer__export-status:empty {
+    display: none;
+}
+
+.marker-viewer__export-button {
+    width: 100%;
+    height: 38px;
+    padding: 6px 10px;
+    border: 1px solid var(--Accent);
+    background: var(--Accent);
+    color: var(--White);
+    font-weight: 700;
+}
+
+.marker-viewer__export-button:hover {
+    color: var(--Black);
+}
+
+.marker-viewer__summary,
+.marker-viewer__selection {
+    padding: 16px;
+}
+
+.marker-viewer__summary {
+    border-bottom: 1px solid var(--LightGray);
+}
+
+.marker-viewer__map-name {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+}
+
+.marker-viewer__map-select {
+    display: grid;
+    gap: 5px;
+    margin: 10px 0;
+    color: var(--Gray);
+    font-size: 12px;
+}
+
+.marker-viewer__map-select select {
+    width: 100%;
+    min-width: 0;
+    min-height: 34px;
+    padding: 5px 8px;
+    border: 1px solid var(--LightGray);
+    background: var(--White);
+    color: var(--Black);
+    font: inherit;
+}
+
+.marker-viewer__warning {
+    display: block;
+    margin-top: 8px;
+    color: var(--Accent);
+    font-size: 12px;
+}
+
+.marker-viewer__stat {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--DarkGray);
+}
+
+.marker-viewer__stat strong {
+    color: var(--Black);
+    font-size: 24px;
+    font-variant-numeric: tabular-nums;
+}
+
+.marker-viewer__date {
+    color: var(--Gray);
+    font-size: 12px;
+}
+
+.marker-viewer__selection h2 {
+    margin: 0 0 12px;
+    font-size: 15px;
+}
+
+.marker-viewer__content {
+    min-height: 2.5em;
+    margin: 0 0 14px;
+    overflow-wrap: anywhere;
+    color: var(--DarkGray);
+    font-size: 13px;
+    white-space: pre-wrap;
+}
+
+.marker-viewer__coordinates {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+}
+
+.marker-viewer__coordinates div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 6px;
+    border-top: 1px solid color-mix(in srgb, var(--LightGray) 50%, transparent);
+    font-size: 12px;
+}
+
+.marker-viewer__coordinates dt {
+    color: var(--Gray);
+}
+
+.marker-viewer__coordinates dd {
+    margin: 0;
+    color: var(--Black);
+    font-family: monospace;
+}
+
+.marker-viewer__coordinate-value {
+    width: auto;
+    height: auto;
+    min-width: 5ch;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    text-align: right;
+    white-space: nowrap;
+    cursor: ew-resize;
+    user-select: none;
+    touch-action: none;
+}
+
+.marker-viewer__coordinate-value.is-scrubbing {
+    color: var(--Accent);
+    cursor: grabbing;
+}
+
+.marker-viewer__edit-controls {
+    display: grid;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--LightGray);
+}
+
+.marker-viewer__edit-controls h3 {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.marker-viewer__edit-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: var(--DarkGray);
+    font-size: 12px;
+}
+
+.marker-viewer__edit-field select {
+    width: 150px;
+    min-width: 0;
+    height: 32px;
+    padding: 4px 6px;
+    border: 1px solid var(--LightGray);
+    background: var(--White);
+    color: var(--Black);
+    font: inherit;
+}
+
+.marker-viewer__edit-field input[type="color"] {
+    width: 36px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid var(--LightGray);
+    background: var(--White);
+    cursor: pointer;
+}
+
+.marker-viewer__text-editor-wrap {
+    position: relative;
+}
+
+.marker-viewer__text-editor-wrap textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 84px;
+    padding: 8px 30px 8px 8px;
+    border: 1px solid var(--LightGray);
+    background: var(--White);
+    color: var(--Black);
+    font: inherit;
+    font-size: 12px;
+    resize: vertical;
+}
+
+.marker-viewer__text-color-swatch {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--Gray);
+    box-shadow: 0 0 0 1px var(--White);
+    pointer-events: none;
+}
+
+.marker-viewer__text-color-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.marker-viewer__apply-color {
+    width: auto;
+    height: 32px;
+    padding: 5px 8px;
+    border: 1px solid var(--LightGray);
+    color: var(--Black);
+    font-size: 12px;
+}
+
+.marker-viewer__unavailable {
+    display: grid;
+    gap: 6px;
+    padding: 20px;
+    color: var(--White);
+    text-align: center;
+}
+
+.marker-viewer__unavailable span {
+    color: #ddd;
+    font-size: 13px;
+}
+
+@media (max-width: 720px) {
+    .marker-viewer__header {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .marker-viewer__back {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+
+    .marker-viewer__heading h1 {
+        font-size: 15px;
+    }
+
+    .marker-viewer__modes button {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+
+    .marker-viewer__body {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr) auto;
+    }
+
+    .marker-viewer__stage {
+        padding: 6px;
+    }
+
+    .marker-viewer__map {
+        width: min(100%, calc(100dvh - 300px));
+    }
+
+    .marker-viewer__inspector {
+        display: flex;
+        flex-direction: column;
+        max-height: 150px;
+        border-top: 1px solid var(--LightGray);
+        border-left: 0;
+    }
+
+    .marker-viewer__export-footer {
+        padding: 6px 10px;
+    }
+
+    .marker-viewer__export-status:not(:empty) {
+        margin-bottom: 3px;
+    }
+
+    .marker-viewer__export-button {
+        height: 34px;
+    }
+
+    .marker-viewer__summary,
+    .marker-viewer__selection {
+        padding: 8px 10px;
+    }
+
+    .marker-viewer__summary {
+        border-right: 1px solid var(--LightGray);
+        border-bottom: 0;
+    }
+
+    .marker-viewer__stat {
+        margin-top: 3px;
+    }
+
+    .marker-viewer__stat strong {
+        font-size: 18px;
+    }
+
+    .marker-viewer__selection h2 {
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .marker-viewer__content {
+        min-height: 0;
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+
+    .marker-viewer__coordinates {
+        display: flex;
+        gap: 8px;
+    }
+
+    .marker-viewer__coordinates div {
+        gap: 4px;
+        border: 0;
+        padding: 0;
+    }
+
+    .marker-viewer__edit-field select {
+        width: min(52vw, 150px);
+    }
+
+    .marker-viewer__apply-color {
+        font-size: 11px;
+    }
+}

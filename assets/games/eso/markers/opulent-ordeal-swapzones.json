@@ -1,0 +1,8 @@
+{
+    "$schema": "https://raw.githubusercontent.com/PetricaT/PetricaT.github.io/main/assets/games/eso/markers.json",
+    "name": "Opulent Ordeal Swapzones",
+    "zone": "Opulent Ordeal",
+    "version": "1.0",
+    "date": "2026-11-08",
+    "markers": "<1565]1778439410]96ad:88dd:8887]3:16,17,18,19;2:1,2,3]0:16,17,18,19]225:19;45:16;135:18;315:17]ad3cd6:6,19;ff8000:7,8,9;f08e56:2;d04a97:1;f25a5a:4,16,17;ff40ea:13,14,15;edc453:5,18;c9444c:10,11,12;cd8095:3]^5:4,5,6;^1:1,2,3;^6:7,8,9,10,11,12,13,14,15,16,17,18,19]4e77:719:2d63: |cad3cd6Shadow|r |cf25a5a←|r|cad3cd6→|r  |cf25a5aGrapple|r,aac:719:2dc3:     |cedc453Sand|r |cf25a5a←|r|cedc453→|r  |cf25a5aGrapple|r,2c10:719:577e: |cad3cd6Shadow|r |cedc453←|r|cad3cd6→|r |cedc453Sand|r     ‌,2c52:63d:0:|cf25a5aGrapple|r,1bf6:1e3:42fd:|cedc453Sand|r,3a65:13d:4465:|cad3cd6Shadow|r,25c7:0:3edb:f,2501:0:3cf1:s1,26fd:0:407f:s2,2d83:0:32e6:f,2b2a:0:333f:s2,2fdc:0:33d3:s1,338c:0:3d7f:s2,319e:0:40a7:s1,332d:0:3f5e:f,0:ae4:bf4:|cf25a5aGrapple|r |cad3cd6→|r |cedc453Sand|r    ‌\\n\\n,59bc:ae4:dfe:|cf25a5aGrapple|r |cedc453→|r |cad3cd6Shadow|r\\n\\n,360:ae4:5e0c:|cedc453Sand|r\\n\\n,50c2:ae4:5ec5:|cad3cd6Shadow|r\\n\\n>"
+}

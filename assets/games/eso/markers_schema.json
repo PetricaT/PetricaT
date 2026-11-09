@@ -1,0 +1,50 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://raw.githubusercontent.com/PetricaT/eso-maps.github.io/main/schemas/markers.json",
+	"title": "ESO Markers File",
+	"description": "Metadata and an M0RMarkers share string for a set of ESO map markers.",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "uri"
+		},
+		"name": {
+			"type": "string",
+			"minLength": 1,
+			"description": "Human-readable name for this marker set."
+		},
+		"zone": {
+			"type": "string",
+			"minLength": 1,
+			"description": "ESO zone associated with this marker set."
+		},
+		"version": {
+			"type": "string",
+			"minLength": 1,
+			"description": "Version of this marker set."
+		},
+		"date": {
+			"type": "string",
+			"format": "date",
+			"description": "Date this marker set was last updated, in YYYY-MM-DD format."
+		},
+		"markers": {
+			"type": "string",
+			"minLength": 10,
+			"pattern": "^<.*>$",
+			"description": "M0RMarkers share string: eight bracket-separated header sections followed by encoded marker coordinates and content."
+		}
+	},
+	"required": [
+		"$schema",
+		"name",
+		"zone",
+		"version",
+		"date",
+		"markers"
+	],
+	"additionalProperties": false
+}
+
+
