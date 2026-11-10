@@ -470,7 +470,7 @@
 
 .marker-viewer__apply-color {
     width: auto;
-    height: 32px;
+    height: auto;
     padding: 5px 8px;
     border: 1px solid var(--LightGray);
     color: var(--Black);
@@ -491,6 +491,19 @@
 }
 
 @media (max-width: 720px) {
+    .main-content--marker-viewer {
+        flex: 0 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .marker-viewer {
+        flex: 0 0 auto;
+        grid-template-rows: auto auto;
+        min-height: auto;
+        overflow: visible;
+    }
+
     .marker-viewer__header {
         grid-template-columns: auto minmax(0, 1fr) auto;
         gap: 6px;
@@ -513,7 +526,8 @@
 
     .marker-viewer__body {
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
+        min-height: auto;
     }
 
     .marker-viewer__stage {
@@ -527,12 +541,15 @@
     .marker-viewer__inspector {
         display: flex;
         flex-direction: column;
-        max-height: 150px;
+        max-height: none;
+        overflow: visible;
         border-top: 1px solid var(--LightGray);
         border-left: 0;
     }
 
     .marker-viewer__export-footer {
+        position: static;
+        margin-top: 0;
         padding: 6px 10px;
     }
 
