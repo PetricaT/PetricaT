@@ -1,3 +1,9 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 button{
     background: none;
     border: none;
@@ -15,6 +21,21 @@ button{
 button:hover{
     transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s;
     color: var(--BlueHi);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2px;
+    }
+
+    .navbar button {
+        width: 100%;
+        height: auto;
+        min-height: 36px;
+        text-align: left;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

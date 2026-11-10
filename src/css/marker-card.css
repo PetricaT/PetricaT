@@ -56,3 +56,30 @@
     border-radius: 4px;
     margin-bottom: 8px;
 }
+
+@media (max-width: 768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .marker-card {
+        width: 100%;
+        min-width: 0;
+        max-width: none;
+        margin: 0;
+    }
+
+    .marker-image {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .card-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

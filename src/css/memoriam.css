@@ -60,6 +60,7 @@
   flex-wrap: wrap;
   gap: 24px;
   padding-left: 24px;
+  min-width: 0;
 }
 
 .pile-wrapper {
@@ -225,4 +226,42 @@
   font-size: 9px;
   color: #888888;
   white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .game-piles {
+    gap: 16px;
+    padding-left: 8px;
+  }
+
+  .carousel-overlay {
+    padding: 12px 8px;
+  }
+
+  .carousel-box {
+    width: 100%;
+    max-width: none;
+    gap: 5px;
+  }
+
+  .carousel-media {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .carousel-img,
+  .carousel-video {
+    max-width: calc(100vw - 100px);
+    max-height: 72dvh;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    padding: 5px;
+  }
+
+  .carousel-meta {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
 }
